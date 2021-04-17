@@ -1,0 +1,17 @@
+# A code snippet to mass delete all likes on Twitter. 
+
+# Open your twitter account with Chrome, go to your profile, click on "Likes" at the top of your profile page, at the top right, open the developer option 
+# by clicking on the three vertical dots, then click on "More tools", then click on "Developer tools" at the bottom and when that opens up, select
+# "Console" at the top. Scroll all the way to the bottom of it and in the open field, paste the bottom code and press enter.
+
+# A big thank you to https://www.youtube.com/watch?v=HJM-qY2Kk78&t=60s that showed me how to do this and the following code can be found
+# on GitHub at https://gist.github.com/aymericbeaumet/d1d6799a1b765c3c8bc0b675b1a1547d
+
+
+
+setInterval(() => {
+  for (const d of document.querySelectorAll('div[data-testid="unlike"]')) {
+    d.click()
+  }
+  window.scrollTo(0, document.body.scrollHeight)
+}, 1000)
